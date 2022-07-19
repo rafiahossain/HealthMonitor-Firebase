@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Tooth" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/blacksky</item>
+        <item name="colorOnPrimary">@color/sky</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/mustard</item>
+        <item name="colorSecondaryVariant">@color/darkmustard</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+</resources>
