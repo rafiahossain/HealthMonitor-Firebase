@@ -53,9 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Login.class);
 
                 //Applying transition animation
-                Pair[] pairs = new Pair[2];
+                Pair[] pairs = new Pair[3];
                 pairs[0] = new Pair<View, String>(logo, "logo_image");
                 pairs[1] = new Pair<View, String>(banner, "logo_text");
+                pairs[2] = new Pair<View, String>(descript, "logo_descript");
 
                 if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
                     ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
