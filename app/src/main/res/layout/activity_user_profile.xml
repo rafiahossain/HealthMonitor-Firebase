@@ -17,6 +17,15 @@
             android:background="@color/sky"
             android:padding="20dp">
 
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/clear"
+                android:tooltipText="Logout"
+                android:onClick="logoutUser"
+                android:src="@android:drawable/ic_lock_power_off" />
+
             <ImageView
                 android:id="@+id/profile_image"
                 android:layout_width="100dp"
@@ -210,10 +219,11 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/sky"
                 android:fontFamily="@font/coiny"
+                android:onClick="update"
                 android:text="Update"
-                android:textColor="@color/darksky"
-                android:backgroundTint="@color/sky"/>
+                android:textColor="@color/darksky" />
 
         </LinearLayout>
 

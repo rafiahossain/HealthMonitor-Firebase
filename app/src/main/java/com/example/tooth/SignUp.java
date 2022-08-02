@@ -162,35 +162,27 @@ public class SignUp extends AppCompatActivity {
         String phoneNo = regPhoneNo.getEditText().getText().toString();
         String password = regPassword.getEditText().getText().toString();
 
+//        Intent intent = new Intent(getApplicationContext(), VerifyPhoneNo.class);
+//        intent.putExtra("phoneNo", phoneNo);
+//        startActivity(intent);
+
         //object of UserHelperClass
         UserHelperClass helperClass = new UserHelperClass(name, username, email, phoneNo, password);
 
-        //use phoneNo for unique id, instead of email as it has symbols e.g. @, ., etc
+        //use username for unique id, instead of email as it has symbols e.g. @, ., etc
         //can be used to override data already stored
         reference.child(username).setValue(helperClass);
 
         Toast.makeText(SignUp.this, "Registation successful", Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(getApplicationContext(), Login.class);
+        startActivity(intent);
     }
 
     //Redirect to login screen
     public void toSignIn(View view) {
         Intent intent = new Intent(SignUp.this, Login.class);
         startActivity(intent);
-
-//                //Applying transition animation
-//                Pair[] pairs = new Pair[7];
-//                pairs[0] = new Pair<View, String>(logo, "logo_image");
-//                pairs[1] = new Pair<View, String>(banner, "logo_text");
-//                pairs[2] = new Pair<View, String>(descript, "logo_descript");
-//                pairs[3] = new Pair<View, String>(username, "username_tran");
-//                pairs[4] = new Pair<View, String>(password, "password_tran");
-//                pairs[5] = new Pair<View, String>(signUp, "transitionbutton1");
-//                pairs[6] = new Pair<View, String>(signIn, "transitionbutton2");
-//
-//                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-//                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(SignUp.this, pairs);
-//                    startActivity(intent, options.toBundle());
-//                }
     }
 
 }
